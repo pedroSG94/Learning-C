@@ -1,8 +1,10 @@
-#include <stdio.h>  //library need for printf() method
-#include "Calculadora.cpp"  //remember, you need import your file for instantiate the class :P
+#include <stdio.h>  //library needed for printf() method
+//remember, you need import your file for instantiate the class :P
+#include "Calculadora.cpp"  
 #include "ListsAndIteratorTest.cpp"
+#include "HeredityTest.cpp"
 
-using namespace std;    //this a the std library (class like string)
+using namespace std;    //static import of std library
 
 void testCalculadora(){
     Calculadora calculadora; //this is a instatiate, you dont need new sentence like java
@@ -16,7 +18,8 @@ void testCalculadora(){
     char result[] = "resultado suma = %d \natributo public %d\n";
     printf(result, suma, calculadora.numPublic);
     
-    //this is the class string in c++
+    //class string in c++, remember use method data() for get char data[]
+    //no need import class because the others classes are doing the import
     string comment;
     comment.append("resultado suma constructor con parametros = %d\n");
     printf(comment.data(), calculadora2.sumar());
@@ -27,9 +30,20 @@ void testListsAndIteratorTest(){
     printf("position 1 in the list = %s\n", listsAndIteratorTest.getPosition(1).data());
 }
 
+void testHeredityTest(){
+    Programmer programmer(22, "Pedro", "Sánchez", "C++");
+    if(programmer.isAdult())    printf("The programmer is adult\n");
+    else    printf("The programmer is very young\n");
+    programmer.writeCode();
+    printf(" Age = %d\n Name = %s\n LastName = %s\n Language = %s\n", 
+            programmer.getAge(), programmer.getName().data(), 
+            programmer.getLastName().data(), programmer.getLanguage().data());
+}
+
 int main() {
     printf("Hello word \n");
     testCalculadora();
     testListsAndIteratorTest();
+    testHeredityTest();
     return 0;
 }

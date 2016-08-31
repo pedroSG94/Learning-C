@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Calculadora.o \
+	${OBJECTDIR}/HeredityTest.o \
 	${OBJECTDIR}/ListsAndIteratorTest.o \
 	${OBJECTDIR}/Main.o
 
@@ -68,6 +69,11 @@ ${OBJECTDIR}/Calculadora.o: Calculadora.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Calculadora.o Calculadora.cpp
+
+${OBJECTDIR}/HeredityTest.o: HeredityTest.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/HeredityTest.o HeredityTest.cpp
 
 ${OBJECTDIR}/ListsAndIteratorTest.o: ListsAndIteratorTest.cpp 
 	${MKDIR} -p ${OBJECTDIR}

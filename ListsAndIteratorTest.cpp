@@ -1,10 +1,11 @@
-#include <iostream>
+#include <string>
 #include <list>
 
 using namespace std;
 
 class ListsAndIteratorTest{
     private:list <string> myList;
+    
     public:ListsAndIteratorTest(){
         myList.push_back("Hola1");
         myList.push_back("Hola2");
