@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Calculadora.o \
 	${OBJECTDIR}/HeredityTest.o \
 	${OBJECTDIR}/ListsAndIteratorTest.o \
+	${OBJECTDIR}/Loops.o \
 	${OBJECTDIR}/Main.o
 
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/ListsAndIteratorTest.o: ListsAndIteratorTest.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListsAndIteratorTest.o ListsAndIteratorTest.cpp
+
+${OBJECTDIR}/Loops.o: Loops.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Loops.o Loops.cpp
 
 ${OBJECTDIR}/Main.o: Main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

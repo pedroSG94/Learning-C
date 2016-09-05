@@ -16,6 +16,7 @@
       <itemPath>Calculadora.cpp</itemPath>
       <itemPath>HeredityTest.cpp</itemPath>
       <itemPath>ListsAndIteratorTest.cpp</itemPath>
+      <itemPath>Loops.cpp</itemPath>
       <itemPath>Main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -39,6 +40,18 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/boost</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/learningc__</output>
+          <commandlineTool>g++</commandlineTool>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="ArraysAndList.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -47,6 +60,8 @@
       <item path="HeredityTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ListsAndIteratorTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Loops.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -78,6 +93,8 @@
       <item path="HeredityTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ListsAndIteratorTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Loops.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
